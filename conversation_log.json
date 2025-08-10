@@ -1,0 +1,84 @@
+[
+    {
+        "timestamp": "2025-08-10T23:46:59.948592",
+        "user_message": {
+            "role": "user",
+            "content": "ㅎㅇ",
+            "timestamp": "2025-08-10T14:46:56.102Z"
+        },
+        "assistant_message": {
+            "role": "assistant",
+            "content": "안녕하세요! 어떻게 도와드릴까요?",
+            "timestamp": "2025-08-10T14:46:59.366Z"
+        },
+        "files": []
+    },
+    {
+        "timestamp": "2025-08-10T23:47:06.109771",
+        "user_message": {
+            "role": "user",
+            "content": "넌 누구야",
+            "timestamp": "2025-08-10T14:47:04.114Z"
+        },
+        "assistant_message": {
+            "role": "assistant",
+            "content": "저는 AI 비서입니다. 정보를 제공하거나 질문에 답변하는 등 여러 가지 도움을 드릴 수 있습니다. 무엇을 도와드릴까요?",
+            "timestamp": "2025-08-10T14:47:05.797Z"
+        },
+        "files": []
+    },
+    {
+        "timestamp": "2025-08-10T23:48:30.362178",
+        "user_message": {
+            "role": "user",
+            "content": "이거 설명해줘",
+            "timestamp": "2025-08-10T14:48:25.395Z"
+        },
+        "assistant_message": {
+            "role": "assistant",
+            "content": "이 이미지는 수동으로 변환하는 작업이 지루하고 시간이 많이 걸린다는 점을 강조하고 있습니다. 책과 마이크 그림을 통해, 문서나 텍스트를 음성으로 변환하는 과정을 나타낸 것 같습니다. 이는 자동화 기술이 이러한 작업을 더 효율적으로 만들 수 있음을 암시합니다.",
+            "timestamp": "2025-08-10T14:48:29.780Z"
+        },
+        "files": [
+            {
+                "name": "스크린샷 2025-05-18 182529.png",
+                "type": "image/png",
+                "size": 93509
+            }
+        ]
+    },
+    {
+        "timestamp": "2025-08-11T00:20:35.634248",
+        "user_message": {
+            "role": "user",
+            "content": "다시 해줘",
+            "timestamp": "2025-08-10T15:20:32.732Z"
+        },
+        "assistant_message": {
+            "role": "assistant",
+            "content": "이 이미지는 수동 변환 작업이 지루하고 시간이 많이 든다는 점을 강조합니다. 책에서 마이크로 이어지는 화살표는 텍스트를 음성으로 변환하는 과정을 나타내며, 자동화된 솔루션의 필요성을 시사합니다.",
+            "timestamp": "2025-08-10T15:20:34.831Z"
+        },
+        "files": [
+            {
+                "original_filename": "2025-05-18_182529.png",
+                "saved_path": "uploads/20250811002035_2025-05-18_182529.png"
+            }
+        ]
+    },
+    {
+        "uid": "1",
+        "timestamp": "2025-08-11T00:55:44.700615",
+        "user_message": {
+            "role": "user",
+            "content": "ㅎㅇ",
+            "timestamp": "2025-08-10T15:55:43.625Z"
+        },
+        "assistant_message": {
+            "role": "assistant",
+            "content": "안녕하세요! 어떻게 도와드릴까요?",
+            "timestamp": "2025-08-10T15:55:44.391Z"
+        },
+        "files": []
+    }
+]
