@@ -24,7 +24,7 @@ const ChatContainer = ({
       {/* Header */}
       <div className="chat-header">
         <div className="header-left">
-          <h1 className="chat-title">GPT 챗봇</h1>
+          <h1 className="chat-title">Baseline</h1>
           {selectedPDF && (
             <div className="selected-pdf-info">
               <FileText size={16} />
@@ -41,12 +41,6 @@ const ChatContainer = ({
             >
               <RefreshCw size={16} />
               PDF 변경
-            </button>
-          )}
-          {messages.length > 0 && (
-            <button onClick={onClearChat} className="clear-button">
-              <Trash2 size={16} />
-              대화 삭제
             </button>
           )}
         </div>

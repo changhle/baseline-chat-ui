@@ -444,8 +444,9 @@ body {
 }
 
 .input-area {
+  position: relative;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column-reverse;
   gap: 8px;
 }
 

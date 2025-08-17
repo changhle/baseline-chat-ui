@@ -166,7 +166,7 @@ const InputArea = ({ onSendMessage, isLoading }) => {
             onKeyDown={handleKeyDown}
             onPaste={handlePaste}
             onInput={handleTextareaResize}
-            placeholder="메시지를 입력하세요... (파일은 드래그앤드롭 또는 Ctrl+V로 붙여넣기)"
+            placeholder="메시지를 입력하세요. (파일은 드래그앤드롭 또는 Ctrl+V로 붙여넣기)"
             className="message-input"
             rows="1"
             disabled={isLoading}

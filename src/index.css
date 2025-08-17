@@ -374,7 +374,7 @@ html, body, #root {
   flex-shrink: 0;
   width: 100%;
   box-sizing: border-box;
-  max-height: 200px;
+  /* max-height: 200px; */
 }
 
 .input-area.drag-over {
