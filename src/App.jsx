@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ChatContainer from "./components/ChatContainer";
 import InputArea from "./components/InputArea";
 import Login from "./components/Login";
@@ -9,6 +9,7 @@ function App() {
   const [uid, setUid] = useState(null);
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const inputRef = useRef(null);
 
   const logConversationToServer = async (userMessage, assistantResponse, currentUid) => {
     const formData = new FormData();
@@ -78,6 +79,9 @@ function App() {
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
+      if (inputRef.current) {
+        inputRef.current.focus();
+      }
     }
   };
 
@@ -129,7 +133,7 @@ function App() {
         isLoading={isLoading}
         onClearChat={clearChat}
       />
-      <InputArea onSendMessage={handleSendMessage} isLoading={isLoading} />
+      <InputArea ref={inputRef} onSendMessage={handleSendMessage} isLoading={isLoading} />
     </div>
   );
 }

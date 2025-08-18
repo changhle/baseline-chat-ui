@@ -1,13 +1,18 @@
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, forwardRef, useEffect } from "react";
 import { Send, Paperclip, X } from "lucide-react";
 import FileUpload from "./FileUpload";
 
-const InputArea = ({ onSendMessage, isLoading }) => {
+const InputArea = forwardRef(({ onSendMessage, isLoading }, ref) => {
   const [message, setMessage] = useState("");
   const [files, setFiles] = useState([]);
   const [isDragOver, setIsDragOver] = useState(false);
-  const textareaRef = useRef(null);
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    if (!isLoading && ref.current) {
+      ref.current.focus();
+    }
+  }, [isLoading, ref]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +20,8 @@ const InputArea = ({ onSendMessage, isLoading }) => {
       onSendMessage(message.trim() || "파일을 첨부했습니다.", files);
       setMessage("");
       setFiles([]);
-      if (textareaRef.current) {
-        textareaRef.current.style.height = "auto";
+      if (ref.current) {
+        ref.current.style.height = "auto";
       }
       // 파일 input 초기화
       if (fileInputRef.current) {
@@ -160,12 +165,13 @@ const InputArea = ({ onSendMessage, isLoading }) => {
       <form onSubmit={handleSubmit} className="input-form">
         <div className="input-wrapper">
           <textarea
-            ref={textareaRef}
+            ref={ref}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             onPaste={handlePaste}
             onInput={handleTextareaResize}
+            onBlur={() => ref.current.focus()} // Always focus
             placeholder="메시지를 입력하세요. (파일은 드래그앤드롭 또는 Ctrl+V로 붙여넣기)"
             className="message-input"
             rows="1"
@@ -205,6 +211,6 @@ const InputArea = ({ onSendMessage, isLoading }) => {
       </form>
     </div>
   );
-};
+});
 
 export default InputArea;
