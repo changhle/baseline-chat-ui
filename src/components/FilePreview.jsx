@@ -12,7 +12,7 @@ const FilePreview = ({ file }) => {
   const imageSrc = file.data
     ? file.data
     : file.saved_path
-    ? `http://localhost:5001/${file.saved_path}`
+    ? `http://localhost:5002/${file.saved_path}`
     : '';
 
   // Extract the file name

@@ -37,7 +37,7 @@ function App() {
     }
 
     try {
-      await fetch('http://localhost:5001/log', {
+      await fetch('http://localhost:5002/log', {
         method: 'POST',
         body: formData,
       });
@@ -89,7 +89,7 @@ function App() {
     setUid(enteredUid);
     setIsLoading(true);
     try {
-      const response = await fetch(`http://localhost:5001/history/${enteredUid}`);
+      const response = await fetch(`http://localhost:5002/history/${enteredUid}`);
       if (!response.ok) {
         throw new Error('Server responded with an error');
       }
