@@ -45,7 +45,7 @@ def log_conversation():
         for file in uploaded_files:
             if file and file.filename:
                 filename = werkzeug.utils.secure_filename(file.filename)
-                unique_filename = f"{datetime.now().strftime('%Y%m%d%H%M%S%f')}_{filename}"
+                unique_filename = f"{uid}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
                 filepath = os.path.join(UPLOAD_FOLDER, unique_filename)
                 file.save(filepath)
                 saved_files_info.append({

@@ -12,8 +12,8 @@ const FilePreview = ({ file }) => {
   const imageSrc = file.data
     ? file.data
     : file.saved_path
-    ? `http://localhost:5002/${file.saved_path}`
-    : '';
+    ? `http://chlee.postech.ac.kr:5002/${file.saved_path}`
+    : "";
 
   // Extract the file name
   const fileName = file.name || (file.saved_path ? file.saved_path.split('/').pop() : 'file');

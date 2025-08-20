@@ -12,7 +12,7 @@ export default function FileUploader() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const res = await fetch("http://localhost:5000/upload", {
+    const res = await fetch("http://chlee.postech.ac.kr:5002/upload", {
       method: "POST",
       body: formData,
     });
